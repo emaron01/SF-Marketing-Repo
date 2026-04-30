@@ -1,6 +1,6 @@
-// SalesForecaster.io Marketing Site JS
+// SalesForecaster.io Marketing Site
 
-// Smooth scroll for nav links
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     const target = document.querySelector(this.getAttribute('href'));
@@ -11,12 +11,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Intersection Observer for scroll animations
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -60px 0px'
-};
-
+// Scroll animations
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -25,47 +20,39 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);
     }
   });
-}, observerOptions);
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-// Animate cards and sections on scroll
 document.querySelectorAll(
-  '.problem-card, .feature-card, .comparison-card, .pricing-card, .flow-step, .value-panel'
+  '.problem-card, .feature-card, .comparison-card, .pricing-card, .flow-step, .value-panel, .health-point, .matthew-inner'
 ).forEach((el, i) => {
   el.style.opacity = '0';
-  el.style.transform = 'translateY(28px)';
-  el.style.transition = `opacity 0.5s ${i * 0.06}s ease, transform 0.5s ${i * 0.06}s ease`;
+  el.style.transform = 'translateY(24px)';
+  el.style.transition = `opacity 0.5s ${i * 0.07}s ease, transform 0.5s ${i * 0.07}s ease`;
   observer.observe(el);
 });
 
-// Demo form handler
+// Demo form
 const form = document.getElementById('demo-form');
 if (form) {
   form.addEventListener('submit', function(e) {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
-    btn.textContent = 'Request Received — We\'ll Be in Touch!';
+    btn.textContent = "Request Received — We'll Be in Touch!";
     btn.style.background = '#5abf3c';
     btn.disabled = true;
-    // In production: send to your CRM or email handler
   });
 }
 
-// Nav active state on scroll
+// Nav active state
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
-
 window.addEventListener('scroll', () => {
   let current = '';
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100;
-    if (window.scrollY >= sectionTop) {
-      current = section.getAttribute('id');
-    }
+    if (window.scrollY >= section.offsetTop - 100) current = section.getAttribute('id');
   });
   navLinks.forEach(link => {
     link.style.color = '';
-    if (link.getAttribute('href') === `#${current}`) {
-      link.style.color = '#1a6dcc';
-    }
+    if (link.getAttribute('href') === `#${current}`) link.style.color = '#1a6dcc';
   });
-});
+}, { passive: true });
