@@ -1119,3 +1119,17 @@ a { text-decoration: none; color: inherit; }
   .pricing-card-big { grid-template-columns: 1fr; }
   .pricing-features-cols { grid-template-columns: 1fr; }
 }
+
+/* ---- HERO REAL IMAGE ---- */
+.hero-img-wrap {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(26,109,204,0.1);
+}
+.hero-real-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-xl);
+}
