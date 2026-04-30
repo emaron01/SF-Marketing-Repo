@@ -16,8 +16,7 @@
   <nav class="nav">
     <div class="nav-inner">
       <a href="/" class="nav-logo">
-        <img src="images/SF_LOGO.png" alt="SalesForecaster.io logo" class="logo-img" />
-        <span class="nav-logo-text">SalesForecaster<span>.io</span></span>
+
       </a>
       <ul class="nav-links">
         <li><a href="#how-it-works">How It Works</a></li>
@@ -499,7 +498,7 @@
             <p>✓ Works with your existing HubSpot</p>
           </div>
         </div>
-        <form class="contact-form" id="demo-form">
+        <form class="contact-form" id="demo-form" action="mailto:erik@salesforecaster.io" method="POST" enctype="text/plain">
           <div class="form-row">
             <input type="text" placeholder="First Name" class="form-input" required />
             <input type="text" placeholder="Last Name" class="form-input" required />
@@ -515,6 +514,7 @@
           </select>
           <button type="submit" class="btn-primary btn-full btn-lg">Book My Demo</button>
           <p class="form-note">We'll reach out within 1 business day to schedule your demo.</p>
+          <input type="hidden" name="_to" value="erik@salesforecaster.io" />
         </form>
       </div>
     </div>
@@ -526,6 +526,7 @@
       <div class="footer-inner">
         <div class="footer-brand">
           <img src="images/SF_LOGO.png" alt="SalesForecaster.io" class="footer-logo" />
+          <div class="footer-brand-name">SalesForecaster<span>.io</span></div>
           <p>AI-led forecast interviews and evidence-based deal intelligence for sales-led teams.</p>
         </div>
         <div class="footer-links">

@@ -1209,21 +1209,6 @@ a { text-decoration: none; color: inherit; }
   width: auto !important;
 }
 
-/* Add company name text next to logo as fallback branding */
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
-.nav-logo-text {
-  font-family: 'Outfit', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--blue);
-  white-space: nowrap;
-}
-.nav-logo-text span { color: var(--green); }
 
 /* ---- HERO FINAL LAYOUT ---- */
 .hero-above-img {
@@ -1249,3 +1234,40 @@ a { text-decoration: none; color: inherit; }
 .hero-below-img .proof-item {
   justify-content: flex-start;
 }
+
+/* ---- NAV LOGO TEXT BIGGER ---- */
+.nav-logo-text {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  color: var(--blue) !important;
+  letter-spacing: -0.02em;
+}
+.nav-logo-text span {
+  color: var(--green) !important;
+}
+
+/* ---- LOGO HIDE IMAGE UNTIL TRANSPARENT VERSION READY ---- */
+.logo-img { display: none !important; }
+.nav-logo-text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  color: var(--blue) !important;
+  letter-spacing: -0.02em;
+}
+.nav-logo-text span { color: var(--green) !important; }
+
+/* Footer logo — also hide until transparent */
+.footer-logo { display: none !important; }
+
+.footer-brand-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+.footer-brand-name span { color: var(--green); }
+
