@@ -1202,3 +1202,25 @@ a { text-decoration: none; color: inherit; }
   .hero-content-center { padding: 48px 20px 56px; }
   .hero-content-center .hero-headline { font-size: 32px; }
 }
+
+/* ---- NAV LOGO FIX ---- */
+.logo-img {
+  height: 44px !important;
+  width: auto !important;
+}
+
+/* Add company name text next to logo as fallback branding */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.nav-logo-text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--blue);
+  white-space: nowrap;
+}
+.nav-logo-text span { color: var(--green); }
