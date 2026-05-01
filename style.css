@@ -154,7 +154,7 @@ a { text-decoration: none; color: inherit; }
   gap: 48px;
 }
 .nav-logo { display: flex; align-items: center; }
-.logo-img { height: 34px; width: auto; }
+.logo-img { height: 60px; width: auto; display: block; }
 .nav-links {
   display: flex;
   list-style: none;
@@ -971,7 +971,7 @@ a { text-decoration: none; color: inherit; }
   border-bottom: 1px solid rgba(255,255,255,0.08);
   margin-bottom: 28px;
 }
-.footer-logo { height: 30px; width: auto; margin-bottom: 14px; filter: brightness(0) invert(1); opacity: 0.85; }
+.footer-logo { height: 52px; width: auto; margin-bottom: 16px; }
 .footer-brand p { font-size: 14px; color: rgba(255,255,255,0.4); line-height: 1.65; max-width: 260px; }
 .footer-links { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
 .footer-col { display: flex; flex-direction: column; gap: 11px; }
@@ -1199,10 +1199,6 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ---- NAV LOGO FIX ---- */
-.logo-img {
-  height: 44px;
-  width: auto;
-}
 
 
 /* ---- HERO FINAL LAYOUT ---- */
@@ -1231,28 +1227,9 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ---- NAV LOGO TEXT BIGGER ---- */
-.nav-logo-text {
-  font-family: 'Outfit', sans-serif !important;
-  font-size: 26px !important;
-  font-weight: 800 !important;
-  color: var(--blue) !important;
-  letter-spacing: -0.02em;
-}
-.nav-logo-text span {
-  color: var(--green) !important;
-}
 
 /* ---- LOGO HIDE IMAGE UNTIL TRANSPARENT VERSION READY ---- */
-.nav-logo-text {
-  font-family: 'Outfit', sans-serif;
-  font-size: 22px !important;
-  font-weight: 800 !important;
-  color: var(--blue) !important;
-  letter-spacing: -0.02em;
-}
-.nav-logo-text span { color: var(--green) !important; }
 
-/* Footer logo — also hide until transparent */
 
 .footer-brand-name {
   font-family: 'Outfit', sans-serif;
@@ -1296,12 +1273,6 @@ a { text-decoration: none; color: inherit; }
   border-radius: var(--radius-xl);
 }
 
-/* Fix nav logo img */
-.nav-logo .logo-img {
-  height: 44px;
-  width: auto;
-  display: block;
-}
 
 @media (max-width: 900px) {
   .hero-split {
