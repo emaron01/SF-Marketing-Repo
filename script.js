@@ -44,3 +44,27 @@ window.addEventListener('scroll', () => {
     if (link.getAttribute('href') === `#${current}`) link.style.color = '#1a6dcc';
   });
 }, { passive: true });
+
+// HubSpot form fallback — show contact details if form is blocked
+(function () {
+  const TIMEOUT_MS = 4000;
+  const formFrame = document.getElementById('hs-form-frame');
+  const fallback = document.getElementById('form-fallback');
+  if (!formFrame || !fallback) return;
+
+  const timer = setTimeout(function () {
+    // If HubSpot hasn't rendered an iframe inside the form frame, show fallback
+    const hsIframe = formFrame.querySelector('iframe');
+    if (!hsIframe) {
+      formFrame.style.display = 'none';
+      fallback.style.display = 'block';
+    }
+  }, TIMEOUT_MS);
+
+  // If HubSpot loads successfully, clear the timer
+  window.addEventListener('message', function (e) {
+    if (e.data && typeof e.data === 'string' && e.data.includes('hsFormCallback')) {
+      clearTimeout(timer);
+    }
+  });
+})();

@@ -5,7 +5,19 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://js-na2.hsforms.net https://js.hsforms.net https://js.hs-scripts.com https://js.hs-analytics.net https://www.google.com https://www.gstatic.com https://recaptcha.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://js-na2.hsforms.net https://www.gstatic.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://js-na2.hsforms.net https://forms.hubspot.com https://www.google.com https://recaptcha.net; connect-src 'self' https://api.hsforms.com https://forms.hubspot.com https://js-na2.hsforms.net https://www.google.com https://recaptcha.net;"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js-na1.hsforms.net https://js-na2.hsforms.net https://js.hsforms.net https://js.hs-scripts.com https://js.hs-analytics.net https://js.hs-banner.com https://js.hscollectedforms.net https://js.usemessages.com https://js.hs-growth-resources.net https://www.google.com https://www.gstatic.com https://recaptcha.net https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://cdn.segment.com https://js.intercomcdn.com https://widget.intercom.io https://static.hotjar.com https://script.hotjar.com https://cdn.heapanalytics.com https://cdn.cookielaw.org https://geolocation.onetrust.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://js-na1.hsforms.net https://js-na2.hsforms.net https://www.gstatic.com; font-src 'self' data: https://fonts.gstatic.com https://js-na1.hsforms.net https://js-na2.hsforms.net; img-src 'self' data: blob: https:; frame-src https://js-na1.hsforms.net https://js-na2.hsforms.net https://forms.hubspot.com https://www.google.com https://recaptcha.net https://www.googletagmanager.com https://player.vimeo.com https://www.youtube.com https://app.hubspot.com; connect-src 'self' https://api.hsforms.com https://forms.hubspot.com https://js-na1.hsforms.net https://js-na2.hsforms.net https://js.hs-analytics.net https://js.hs-scripts.com https://www.google-analytics.com https://stats.g.doubleclick.net https://region1.google-analytics.com https://www.googletagmanager.com https://cdn.segment.com https://api.segment.io https://geolocation.onetrust.com; worker-src blob:;"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
         }
       ]
     }

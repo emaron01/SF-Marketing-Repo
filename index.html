@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <script src="https://js-na2.hsforms.net/forms/embed/245933645.js" defer></script>
 </head>
 <body>
@@ -507,11 +509,30 @@
             <p>✓ Works with your existing HubSpot</p>
           </div>
         </div>
-        <div
-          class="hs-form-frame"
-          data-region="na2"
-          data-form-id="4876815c-2d7a-4402-8108-e8d7a4f78b61"
-          data-portal-id="245933645">
+        <div id="form-container">
+          <div
+            class="hs-form-frame"
+            id="hs-form-frame"
+            data-region="na2"
+            data-form-id="4876815c-2d7a-4402-8108-e8d7a4f78b61"
+            data-portal-id="245933645">
+          </div>
+          <div id="form-fallback" style="display:none;" class="form-fallback">
+            <div class="form-fallback-icon">&#x1F512;</div>
+            <h3>Your browser's security settings are blocking our form.</h3>
+            <p>No problem &#8212; reach us directly to schedule your demo:</p>
+            <div class="form-fallback-contacts">
+              <a href="tel:+12153533849" class="fallback-contact-link">
+                <span class="fallback-icon">&#x1F4DE;</span>
+                <span>215-353-3849</span>
+              </a>
+              <a href="mailto:sales@salesforecaster.com" class="fallback-contact-link">
+                <span class="fallback-icon">&#x2709;&#xFE0F;</span>
+                <span>sales@salesforecaster.com</span>
+              </a>
+            </div>
+            <p class="form-fallback-note">We respond within 1 business day.</p>
+          </div>
         </div>
       </div>
     </div>
