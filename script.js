@@ -31,34 +31,6 @@ document.querySelectorAll(
   observer.observe(el);
 });
 
-// Demo form — sends to erik@salesforecaster.io
-const form = document.getElementById('demo-form');
-if (form) {
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const inputs = form.querySelectorAll('input, select');
-    const data = {};
-    inputs.forEach(input => {
-      if (input.placeholder) data[input.placeholder] = input.value;
-    });
-
-    const subject = encodeURIComponent('SalesForecaster.io Demo Request — ' + (data['Company Name'] || 'New Lead'));
-    const body = encodeURIComponent(
-      'Demo Request from SalesForecaster.io
-
-' +
-      Object.entries(data).map(([k, v]) => k + ': ' + v).join('
-')
-    );
-
-    window.location.href = `mailto:erik@salesforecaster.io?subject=${subject}&body=${body}`;
-
-    const btn = form.querySelector('button[type="submit"]');
-    btn.textContent = "Opening your email client...";
-    btn.style.background = '#5abf3c';
-  });
-}
-
 // Nav active state
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
