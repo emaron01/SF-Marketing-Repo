@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — SalesForecaster.io</title>
+  <meta name="description" content="Get in touch with the SalesForecaster.io team. Questions about Matthew, pricing, or how it works? We're here to help." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <script src="https://js-na2.hsforms.net/forms/embed/245933645.js" defer></script>
+  <style>
+    .contact-page-hero {
+      background: var(--gray-50);
+      padding: 80px 0 64px;
+      text-align: center;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .contact-page-hero .section-label {
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+    .contact-page-hero h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.025em;
+      margin-bottom: 16px;
+    }
+    .contact-page-hero p {
+      font-size: 18px;
+      color: var(--text-light);
+      max-width: 540px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    .contact-page-body {
+      padding: 72px 0 96px;
+    }
+    .contact-page-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 72px;
+      align-items: start;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .contact-info-block h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .contact-info-block p {
+      font-size: 15px;
+      color: var(--text-light);
+      line-height: 1.65;
+    }
+    .contact-info-block a {
+      color: var(--blue);
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .contact-info-block a:hover {
+      text-decoration: underline;
+    }
+    .contact-tollfree {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--green);
+      text-decoration: none;
+      margin-top: 4px;
+    }
+    .contact-tollfree:hover {
+      color: var(--green-dark);
+    }
+    .contact-divider {
+      height: 1px;
+      background: var(--gray-200);
+    }
+    .contact-reasons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .contact-reason {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text-light);
+    }
+    .contact-reason::before {
+      content: "→";
+      color: var(--blue);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .hs-form-wrap {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      box-shadow: var(--shadow);
+    }
+    .hs-form-wrap .hs-form-frame {
+      width: 100%;
+    }
+    .hs-tollfree-below {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 15px;
+      color: var(--text-light);
+    }
+    .hs-tollfree-below a {
+      font-family: 'Outfit', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--green);
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 4px;
+    }
+    .hs-tollfree-below a:hover {
+      color: var(--green-dark);
+    }
+    @media (max-width: 768px) {
+      .contact-page-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 4px;
+      }
+      .contact-page-hero { padding: 56px 0 48px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="images/logo.png" alt="SalesForecaster.io" class="logo-img" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#how-it-works">How It Works</a></li>
+        <li><a href="/#health-score">Features</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/#hubspot">HubSpot</a></li>
+        <li><a href="contact.html" style="color: var(--blue); font-weight: 600;">Contact Us</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="https://mysalesforecast.io" class="btn-ghost">Login</a>
+        <a href="/#contact" class="btn-primary">Book a Demo</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="contact-page-hero">
+    <div class="container">
+      <div class="section-label">Get in Touch</div>
+      <h1>We'd Love to Hear From You</h1>
+      <p>Questions about Matthew, pricing, how it works, or anything else — send us a message and we'll get back to you within 1 business day.</p>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="contact-page-body">
+    <div class="container">
+      <div class="contact-page-grid">
+
+        <!-- LEFT: Contact Info -->
+        <div class="contact-info">
+
+          <div class="contact-info-block">
+            <h3>Call Us</h3>
+            <p>Prefer to talk? We're available Monday–Friday, 9am–5pm ET.</p>
+            <a href="tel:+18337253745" class="contact-tollfree">
+              📞 833-725-3745
+            </a>
+
+          </div>
+
+          <div class="contact-divider"></div>
+
+          <div class="contact-info-block">
+            <h3>Email Us</h3>
+            <p>For general inquiries and sales questions:</p>
+            <a href="mailto:sales@salesforecaster.io">sales@salesforecaster.io</a>
+          </div>
+
+          <div class="contact-divider"></div>
+
+          <div class="contact-info-block">
+            <h3>Office</h3>
+            <p>Lansdale, PA 19446</p>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: HubSpot Form -->
+        <div class="hs-form-wrap">
+          <div
+            class="hs-form-frame"
+            data-region="na2"
+            data-form-id="1dff1c51-fbc2-48ff-a8c9-62a46b77cd5c"
+            data-portal-id="245933645">
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="images/SF_LOGO.png" alt="SalesForecaster.io" class="footer-logo" />
+          <p>AI-led rep forecast interviews and evidence-based gap analysis, instant coaching and improved forecast accuracy.</p>
+          <br><p>Call today (833) 725-3745</p>
+          <br><p>Email: sales@salesforecaster.io</p>
+          <br><br><p>Lansdale, PA 19446</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <div class="footer-col-title">Platform</div>
+            <a href="/#how-it-works">How It Works</a>
+            <a href="/#health-score">Health Score</a>
+            <a href="/#features">Features</a>
+            <a href="/#pricing">Pricing</a>
+            <a href="/#hubspot">HubSpot Integration</a>
+          </div>
+          <div class="footer-col">
+            <div class="footer-col-title">Company</div>
+            <a href="/#contact">Book a Demo</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="https://mysalesforecast.io">Login</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 SalesForecaster.io. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
