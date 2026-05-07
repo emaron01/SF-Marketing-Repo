@@ -154,7 +154,7 @@ a { text-decoration: none; color: inherit; }
   gap: 48px;
 }
 .nav-logo { display: flex; align-items: center; }
-.logo-img { height: 60px; width: auto; display: block; }
+.logo-img { height: 44px; width: auto; display: block; }
 .nav-links {
   display: flex;
   list-style: none;
@@ -1282,60 +1282,44 @@ a { text-decoration: none; color: inherit; }
   .hero-split .hero-right { display: none !important; }
 }
 
-/* HubSpot Form Fallback */
-.form-fallback {
-  background: var(--dark-card, #1e2a45);
-  border: 1px solid var(--dark-border, rgba(255,255,255,0.08));
-  border-radius: 16px;
-  padding: 40px 36px;
-  text-align: center;
-  color: var(--text, #111827);
-  background: #fff;
+/* ---- CRM OVERLAPPING SCREENSHOTS ---- */
+.crm-screenshots-wrap {
+  position: relative;
+  height: 520px;
 }
-.form-fallback-icon {
-  font-size: 2.5rem;
-  margin-bottom: 16px;
+.crm-screenshot-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 88%;
+  z-index: 1;
+  transform: rotate(-2deg);
+  box-shadow: var(--shadow-lg);
 }
-.form-fallback h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--dark, #0d1221);
-  margin-bottom: 12px;
-  line-height: 1.4;
+.crm-screenshot-front {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 88%;
+  z-index: 2;
+  transform: rotate(1.5deg);
+  box-shadow: 0 32px 80px rgba(0,0,0,0.25);
+  border: 2px solid var(--gray-200);
 }
-.form-fallback p {
-  color: #4b5563;
-  margin-bottom: 24px;
-  font-size: 1rem;
+.crm-screenshot-back img,
+.crm-screenshot-front img {
+  max-height: 360px;
+  object-fit: cover;
+  object-position: top left;
 }
-.form-fallback-contacts {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-bottom: 20px;
-}
-.fallback-contact-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 14px 24px;
-  border-radius: 10px;
-  background: #f0f4ff;
-  color: var(--blue, #1a6dcc);
-  font-weight: 600;
-  font-size: 1.05rem;
-  text-decoration: none;
-  transition: background 0.2s ease;
-}
-.fallback-contact-link:hover {
-  background: #dce8ff;
-}
-.fallback-icon {
-  font-size: 1.2rem;
-}
-.form-fallback-note {
-  font-size: 0.85rem;
-  color: #9ca3af;
-  margin-bottom: 0;
+
+@media (max-width: 768px) {
+  .crm-screenshots-wrap { height: auto; }
+  .crm-screenshot-back,
+  .crm-screenshot-front {
+    position: relative;
+    width: 100%;
+    transform: none;
+    margin-bottom: 16px;
+  }
 }
