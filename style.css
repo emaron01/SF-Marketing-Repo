@@ -154,18 +154,19 @@ a { text-decoration: none; color: inherit; }
   gap: 48px;
 }
 .nav-logo { display: flex; align-items: center; }
-.logo-img { height: 44px; width: auto; display: block; }
+.logo-img { height: 60px; width: auto; display: block; }
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 28px;
+  gap: 20px;
   flex: 1;
 }
 .nav-links a {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   color: var(--gray-600);
   transition: color 0.2s;
+  white-space: nowrap;
 }
 .nav-links a:hover { color: var(--blue); }
 .nav-cta { display: flex; align-items: center; gap: 16px; }
