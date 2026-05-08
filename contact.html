@@ -13,84 +13,107 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <script src="https://js-na2.hsforms.net/forms/embed/245933645.js" defer></script>
   <style>
+    body.contact-page {
+      color: var(--white);
+      background:
+        radial-gradient(circle at 18% 8%, rgba(34,211,238,0.18), transparent 32%),
+        radial-gradient(circle at 84% 16%, rgba(59,130,246,0.16), transparent 30%),
+        linear-gradient(180deg, #08111f 0%, #0b1729 58%, #08111f 100%);
+    }
     .contact-page-hero {
-      background: var(--gray-50);
-      padding: 80px 0 64px;
+      position: relative;
+      overflow: hidden;
+      padding: 96px 0 56px;
       text-align: center;
-      border-bottom: 1px solid var(--gray-200);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
     }
     .contact-page-hero .section-label {
       display: inline-block;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
+      color: var(--cyan);
     }
     .contact-page-hero h1 {
       font-family: 'Outfit', sans-serif;
-      font-size: clamp(32px, 4vw, 52px);
-      font-weight: 800;
-      color: var(--text);
-      letter-spacing: -0.025em;
-      margin-bottom: 16px;
+      font-size: clamp(40px, 5vw, 68px);
+      font-weight: 900;
+      color: var(--white);
+      letter-spacing: -0.04em;
+      margin: 0 auto 20px;
+      max-width: 860px;
     }
     .contact-page-hero p {
-      font-size: 18px;
-      color: var(--text-light);
-      max-width: 540px;
+      font-size: 19px;
+      color: #cbd5e1;
+      max-width: 650px;
       margin: 0 auto;
-      line-height: 1.7;
+      line-height: 1.75;
     }
     .contact-page-body {
-      padding: 72px 0 96px;
+      padding: 64px 0 104px;
+      background: linear-gradient(180deg, rgba(11,23,41,0.82), rgba(8,17,31,0.96));
     }
     .contact-page-grid {
       display: grid;
-      grid-template-columns: 1fr 1.6fr;
-      gap: 72px;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 36px;
       align-items: start;
-      max-width: 1000px;
+      max-width: 1080px;
       margin: 0 auto;
+    }
+    .contact-info,
+    .hs-form-wrap {
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: var(--radius-xl);
+      background: rgba(255,255,255,0.045);
+      box-shadow: var(--shadow-cyan);
+      backdrop-filter: blur(14px);
     }
     .contact-info {
       display: flex;
       flex-direction: column;
-      gap: 32px;
+      gap: 0;
+      overflow: hidden;
+    }
+    .contact-info-block {
+      padding: 28px;
     }
     .contact-info-block h3 {
       font-family: 'Outfit', sans-serif;
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--text);
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--white);
       margin-bottom: 8px;
     }
     .contact-info-block p {
       font-size: 15px;
-      color: var(--text-light);
-      line-height: 1.65;
+      color: #cbd5e1;
+      line-height: 1.7;
     }
     .contact-info-block a {
-      color: var(--blue);
-      font-weight: 500;
+      color: var(--cyan);
+      font-weight: 800;
       text-decoration: none;
     }
     .contact-info-block a:hover {
-      text-decoration: underline;
+      color: #67e8f9;
     }
     .contact-tollfree {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       font-family: 'Outfit', sans-serif;
-      font-size: 22px;
-      font-weight: 800;
+      font-size: 24px;
+      font-weight: 900;
       color: var(--green);
       text-decoration: none;
-      margin-top: 4px;
+      margin-top: 10px;
     }
     .contact-tollfree:hover {
-      color: var(--green-dark);
+      color: #86efac;
     }
     .contact-divider {
       height: 1px;
-      background: var(--gray-200);
+      background: rgba(255,255,255,0.10);
     }
     .contact-reasons {
       display: flex;
@@ -102,67 +125,119 @@
       align-items: flex-start;
       gap: 10px;
       font-size: 14px;
-      color: var(--text-light);
+      color: #cbd5e1;
     }
     .contact-reason::before {
-      content: "→";
-      color: var(--blue);
-      font-weight: 700;
+      content: ">";
+      color: var(--cyan);
+      font-weight: 900;
       flex-shrink: 0;
       margin-top: 1px;
     }
     .hs-form-wrap {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius-xl);
-      padding: 40px;
-      box-shadow: var(--shadow);
+      position: relative;
+      padding: 34px;
+      background: linear-gradient(145deg, rgba(34,211,238,0.13), rgba(255,255,255,0.055));
+      border-color: rgba(34,211,238,0.24);
+    }
+    .hs-form-wrap::before {
+      content: "Contact Sales";
+      display: block;
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 18px;
     }
     .hs-form-wrap .hs-form-frame {
       width: 100%;
+      min-height: 420px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.96);
+      padding: 24px;
+      box-shadow: 0 24px 70px rgba(0,0,0,0.24);
+    }
+    .hs-form-wrap .hs-form,
+    .hs-form-wrap form {
+      background: transparent !important;
+    }
+    .hs-form-wrap label,
+    .hs-form-wrap .hs-form-field > label,
+    .hs-form-wrap .hs-richtext,
+    .hs-form-wrap .legal-consent-container {
+      color: #1f2937 !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+    }
+    .hs-form-wrap input,
+    .hs-form-wrap textarea,
+    .hs-form-wrap select {
+      border-radius: 10px !important;
+      border: 1px solid #cbd5e1 !important;
+      background: #f8fafc !important;
+      color: #0f172a !important;
+      min-height: 44px;
+    }
+    .hs-form-wrap input[type="submit"],
+    .hs-form-wrap .hs-button {
+      border: 0 !important;
+      border-radius: 12px !important;
+      background: var(--cyan) !important;
+      color: #07111f !important;
+      font-family: 'Outfit', sans-serif !important;
+      font-weight: 900 !important;
+      padding: 14px 24px !important;
+      box-shadow: 0 14px 36px rgba(34,211,238,0.20) !important;
+    }
+    .hs-form-wrap input[type="submit"]:hover,
+    .hs-form-wrap .hs-button:hover {
+      background: #67e8f9 !important;
     }
     .hs-tollfree-below {
       margin-top: 20px;
       text-align: center;
       font-size: 15px;
-      color: var(--text-light);
+      color: #cbd5e1;
     }
     .hs-tollfree-below a {
       font-family: 'Outfit', sans-serif;
       font-size: 20px;
-      font-weight: 800;
+      font-weight: 900;
       color: var(--green);
       text-decoration: none;
       display: inline-block;
       margin-top: 4px;
     }
     .hs-tollfree-below a:hover {
-      color: var(--green-dark);
+      color: #86efac;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       .contact-page-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 28px;
         padding: 0 4px;
       }
-      .contact-page-hero { padding: 56px 0 48px; }
+      .contact-page-hero { padding: 68px 0 44px; }
+      .hs-form-wrap { padding: 22px; }
+      .hs-form-wrap .hs-form-frame { padding: 18px; }
     }
   </style>
 </head>
-<body>
+<body class="contact-page">
 
   <!-- NAV -->
-  <nav class="nav">
+  <nav class="nav nav-dark">
     <div class="nav-inner">
       <a href="/" class="nav-logo">
         <img src="images/logo.png" alt="SalesForecaster.io" class="logo-img" />
       </a>
       <ul class="nav-links">
-        <li><a href="/#how-it-works">How It Works</a></li>
-        <li><a href="/#health-score">Features</a></li>
+        <li><a href="/#why">Why It Matters</a></li>
+        <li><a href="/#platform">Platform</a></li>
         <li><a href="/#pricing">Pricing</a></li>
-        <li><a href="/#hubspot">CRM Integrations</a></li>
-        <li><a href="contact.html" style="color: var(--blue); font-weight: 600;">Contact Us</a></li>
+        <li><a href="/#crm">CRM Integrations</a></li>
+        <li><a href="contact.html" style="color: var(--cyan); font-weight: 800;">Contact Us</a></li>
       </ul>
       <div class="nav-cta">
         <a href="https://mysalesforecast.io" class="btn-ghost">Login</a>

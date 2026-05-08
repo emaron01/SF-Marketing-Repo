@@ -23,7 +23,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
 document.querySelectorAll(
-  '.problem-card, .feature-card, .comparison-card, .pricing-card, .flow-step, .value-panel, .health-point, .matthew-inner'
+  '.problem-card, .feature-card, .comparison-card, .pricing-card, .flow-step, .value-panel, .health-point, .matthew-inner, .sf-card, .feature-large, .medd-card, .screenshot-card, .contact-panel'
 ).forEach((el, i) => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(24px)';
