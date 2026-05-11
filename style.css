@@ -362,9 +362,8 @@ ul { list-style: none; }
 }
 .matthew-grid {
   display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  gap: 56px;
-  align-items: center;
+  grid-template-columns: 1fr;
+  margin-top: 44px;
 }
 .matthew-copy .section-sub { max-width: 680px; }
 .matthew-body {
@@ -375,7 +374,10 @@ ul { list-style: none; }
   color: #dbeafe;
   line-height: 1.8;
 }
-.matthew-visual { background: rgba(15,23,42,0.84); }
+.matthew-visual {
+  width: 100%;
+  background: rgba(15,23,42,0.84);
+}
 .matthew-visual img {
   width: 100%;
   height: auto;
@@ -614,7 +616,6 @@ ul { list-style: none; }
   .hero-inner { min-height: auto; padding-top: 64px; }
   .floating-alert { display: none; }
   .three-card-grid { grid-template-columns: 1fr; }
-  .matthew-visual { order: -1; }
   .matthew-feature-grid { grid-template-columns: repeat(2, 1fr); }
   .medd-grid { grid-template-columns: repeat(2, 1fr); }
 }
