@@ -311,6 +311,13 @@ ul { list-style: none; }
 .floating-alert strong { display: block; font-size: 14px; margin-bottom: 4px; }
 .floating-alert span { display: block; font-family: 'Outfit', sans-serif; font-size: 28px; line-height: 1; font-weight: 900; }
 .floating-alert small { color: #cbd5e1; }
+.floating-alert small span {
+  display: inline;
+  font-size: inherit;
+  line-height: inherit;
+}
+.evidence-red { color: #fca5a5; }
+.evidence-green { color: #86efac; }
 .floating-alert-risk { top: -28px; left: -22px; color: #fecdd3; background: rgba(244,63,94,0.12); border-color: rgba(251,113,133,0.45); }
 .floating-alert-evidence { right: 42px; bottom: -28px; color: #a7f3d0; background: rgba(16,185,129,0.12); border-color: rgba(52,211,153,0.45); }
 
