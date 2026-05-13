@@ -521,6 +521,67 @@ ul { list-style: none; }
   line-height: 1.75;
 }
 
+.leader-hero-section {
+  background:
+    radial-gradient(circle at 80% 12%, rgba(34,211,238,0.14), transparent 34%),
+    linear-gradient(180deg, #0b1729 0%, #08111f 100%);
+  border-bottom: 1px solid var(--dark-border);
+}
+.leader-hero-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 56px;
+  align-items: center;
+}
+.leader-hero-copy .section-sub {
+  max-width: 680px;
+}
+.leader-value-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 30px;
+  color: #e2e8f0;
+  font-size: 17px;
+  line-height: 1.65;
+}
+.leader-value-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.leader-value-list li::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  margin-top: 9px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 18px rgba(34,211,238,0.45);
+  flex-shrink: 0;
+}
+.leader-hero-visuals {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.leader-screenshot {
+  width: 100%;
+  background: rgba(15,23,42,0.84);
+}
+.leader-screenshot img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.leader-screenshot-secondary {
+  width: 88%;
+  margin-top: -34px;
+  margin-right: 28px;
+  position: relative;
+  z-index: 2;
+}
+
 .feature-large-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 .feature-large { overflow: hidden; padding: 28px; }
 .feature-shot { margin-top: 24px; max-height: 420px; }
@@ -745,6 +806,7 @@ ul { list-style: none; }
   .hero-inner,
   .split-section,
   .matthew-grid,
+  .leader-hero-grid,
   .contact-panel { grid-template-columns: 1fr; }
   .hero-inner { min-height: auto; padding-top: 64px; }
   .floating-alert { display: none; }
@@ -759,6 +821,11 @@ ul { list-style: none; }
   .nav-cta { margin-left: auto; }
   .matthew-visual-content { grid-template-columns: 1fr; }
   .matthew-portrait { max-height: 520px; }
+  .leader-screenshot-secondary {
+    width: 100%;
+    margin-top: 18px;
+    margin-right: 0;
+  }
   .hero-proof-grid,
   .matthew-feature-grid,
   .feature-large-grid,
