@@ -460,10 +460,26 @@ ul { list-style: none; }
   width: 100%;
   background: rgba(15,23,42,0.84);
 }
-.matthew-visual img {
+.matthew-visual-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  min-height: 430px;
+  padding: 18px;
+  background:
+    radial-gradient(circle at 24% 36%, rgba(37,99,235,0.24), transparent 36%),
+    linear-gradient(135deg, rgba(5,11,24,0.82), rgba(7,20,38,0.92));
+}
+.matthew-portrait {
+  align-self: stretch;
+  overflow: hidden;
+  border-radius: 18px;
+}
+.matthew-portrait img {
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 .matthew-feature-grid {
   display: grid;
@@ -741,6 +757,8 @@ ul { list-style: none; }
   .nav-inner { height: auto; min-height: 72px; padding-top: 10px; padding-bottom: 10px; }
   .nav-links { display: none; }
   .nav-cta { margin-left: auto; }
+  .matthew-visual-content { grid-template-columns: 1fr; }
+  .matthew-portrait { max-height: 520px; }
   .hero-proof-grid,
   .matthew-feature-grid,
   .feature-large-grid,
