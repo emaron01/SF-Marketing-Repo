@@ -458,28 +458,36 @@ ul { list-style: none; }
 }
 .matthew-visual {
   width: 100%;
+  max-width: 470px;
+  justify-self: center;
+  align-self: start;
+  margin-top: 38px;
   background: rgba(15,23,42,0.84);
 }
 .matthew-visual-content {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
-  min-height: 430px;
-  padding: 18px;
+  height: 675px;
+  min-height: 0;
+  padding: 0;
   background:
     radial-gradient(circle at 24% 36%, rgba(37,99,235,0.24), transparent 36%),
     linear-gradient(135deg, rgba(5,11,24,0.82), rgba(7,20,38,0.92));
 }
 .matthew-portrait {
+  height: 100%;
   align-self: stretch;
   overflow: hidden;
-  border-radius: 18px;
+  border-radius: 22px;
 }
 .matthew-portrait img {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  object-fit: contain;
+  object-position: center center;
+  margin: 0 auto;
 }
 .matthew-feature-grid {
   display: grid;
@@ -561,12 +569,10 @@ ul { list-style: none; }
   flex-shrink: 0;
 }
 .leader-hero-visuals {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  position: relative;
+  min-height: 650px;
 }
 .leader-screenshot {
-  width: 100%;
   background: rgba(15,23,42,0.84);
 }
 .leader-screenshot img {
@@ -574,11 +580,14 @@ ul { list-style: none; }
   height: auto;
   object-fit: contain;
 }
+.leader-screenshot-primary {
+  width: 78%;
+}
 .leader-screenshot-secondary {
-  width: 88%;
-  margin-top: -34px;
-  margin-right: 28px;
-  position: relative;
+  position: absolute;
+  top: 96px;
+  right: 0;
+  width: 78%;
   z-index: 2;
 }
 
@@ -821,10 +830,14 @@ ul { list-style: none; }
   .nav-cta { margin-left: auto; }
   .matthew-visual-content { grid-template-columns: 1fr; }
   .matthew-portrait { max-height: 520px; }
+  .leader-hero-visuals { min-height: auto; }
+  .leader-screenshot-primary,
   .leader-screenshot-secondary {
     width: 100%;
+  }
+  .leader-screenshot-secondary {
+    position: static;
     margin-top: 18px;
-    margin-right: 0;
   }
   .hero-proof-grid,
   .matthew-feature-grid,
