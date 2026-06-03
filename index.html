@@ -50,26 +50,36 @@
       <div class="container wide-container matthew-grid">
         <div class="matthew-copy">
           <div class="section-label">MEET MATTHEW</div>
-          <h2 class="section-title light-title">Stop Week Commits Before They Miss</h2>
+          <h2 class="section-title light-title">Matthew Finds The Risk So Leaders Can Coach To It</h2>
           <p class="section-sub light-sub">Meet Matthew, your AI deal review Agent. Matthew enforces consistent qualification—even if your team isn't formally MEDDPICC trained.</p>
           <div class="matthew-body">
-            <p>He interviews every rep on every active deal, pressure-tests qualification, and exposes MEDDPICC, Timing, and Budget gaps before they become forecast misses. Matthew gives reps practical coaching guidance and sales leaders evidence they can trust.</p>
-            <p>AI-led deal inspection helps reps prepare for their next meeting, improves sales conversations, and gives sales leaders deal progression evidence they can trust.</p>
-          </div>
-          <div class="matthew-cta">
-            <div>
-              <h3>See Matthew in Action</h3>
-              <p>The fastest way to understand SalesForecaster is to watch Matthew run a real forecast conversation.</p>
-            </div>
-            <a href="#contact" class="btn-primary btn-lg">See Matthew in Action</a>
+            <p>Matthew interviews every rep on every active deal, validates MEDDPICC evidence, and surfaces qualification gaps before they become forecast misses.</p>
+            <p>He identifies coaching opportunities reps and managers can act on—so leaders spend forecast time coaching instead of chasing forecast answers.</p>
           </div>
         </div>
-        <div class="screenshot-card matthew-visual">
-          <div class="matthew-visual-content">
-            <div class="matthew-portrait">
-              <img src="images/matthew-only.png" width="484" height="650" alt="Matthew AI Sales Assistant" />
+        <div class="matthew-visual-column">
+          <div class="screenshot-card matthew-visual">
+            <div class="matthew-visual-content">
+              <button type="button" class="matthew-video-trigger" data-matthew-video-open aria-label="Watch Matthew demo video">
+                <img
+                  class="matthew-video-thumb"
+                  src="https://cdn.loom.com/sessions/thumbnails/ef7a0fb1c81a4da2bba5a4feff7d1369-acfe503216201bde-full-play.gif#t=0.1"
+                  width="960"
+                  height="600"
+                  alt=""
+                />
+                <span class="matthew-video-overlay" aria-hidden="true">
+                  <span class="matthew-video-play">
+                    <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor" focusable="false">
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </span>
+                  <span class="matthew-video-label">QUICK MATTHEW OVERVIEW</span>
+                </span>
+              </button>
             </div>
           </div>
+          <a href="#contact" class="btn-primary btn-lg matthew-visual-demo-cta">Book a Demo</a>
         </div>
       </div>
 
@@ -132,7 +142,7 @@
           </p>
           <div class="hero-actions">
             <a href="#contact" class="btn-primary btn-lg">Book Live Demo <span aria-hidden="true">-&gt;</span></a>
-            <a href="#matthew" class="btn-outline btn-lg">See Matthew in Action</a>
+            <button type="button" class="btn-outline btn-lg" data-matthew-video-open>See Matthew in Action</button>
             <a href="tel:+18337253745" class="btn-phone">Call 833-725-3745</a>
           </div>
         </div>
@@ -299,7 +309,7 @@
         <div class="section-header centered">
           <div class="section-label">The executive problem</div>
           <h2 class="section-title light-title">CRM forecasts tell you what reps entered. SalesForecaster tells you what the deal can prove.</h2>
-          <p class="section-sub light-sub">Revenue leaders need a governance layer that separates real forecast confidence from hopeful stage movement.</p>
+          <p class="section-sub light-sub">The gap between what reps enter and what deals can prove is where forecasts go wrong. Revenue leaders need to know which commits are real — before the quarter slips.</p>
         </div>
         <div class="three-card-grid">
           <article class="sf-card">
@@ -575,6 +585,20 @@
       </div>
     </div>
   </footer>
+
+  <div id="matthew-video-modal" class="matthew-video-modal" hidden>
+    <div class="matthew-video-modal-backdrop" data-matthew-video-close tabindex="-1" aria-hidden="true"></div>
+    <div
+      class="matthew-video-modal-dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Watch Matthew demo video">
+      <button type="button" class="matthew-video-modal-close" data-matthew-video-close aria-label="Close video">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="matthew-video-modal-frame"></div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

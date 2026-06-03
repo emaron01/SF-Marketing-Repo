@@ -1,5 +1,70 @@
 // SalesForecaster.io Marketing Site
 
+// Matthew demo video modal (Meet Matthew section)
+(function () {
+  const EMBED_URL = 'https://www.loom.com/embed/ef7a0fb1c81a4da2bba5a4feff7d1369';
+  const modal = document.getElementById('matthew-video-modal');
+  if (!modal) return;
+
+  const frameHost = modal.querySelector('.matthew-video-modal-frame');
+  const openers = document.querySelectorAll('[data-matthew-video-open]');
+  const closers = modal.querySelectorAll('[data-matthew-video-close]');
+  let lastActiveElement = null;
+
+  function mountIframe() {
+    if (!frameHost || frameHost.firstElementChild) return;
+    const iframe = document.createElement('iframe');
+    iframe.src = EMBED_URL;
+    iframe.title = 'Watch Matthew demo video';
+    iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
+    iframe.setAttribute('allowfullscreen', '');
+    frameHost.appendChild(iframe);
+  }
+
+  function unmountIframe() {
+    if (!frameHost) return;
+    frameHost.innerHTML = '';
+  }
+
+  function openModal() {
+    lastActiveElement = document.activeElement;
+    mountIframe();
+    modal.hidden = false;
+    document.body.classList.add('matthew-video-modal-open');
+    const closeButton = modal.querySelector('.matthew-video-modal-close');
+    if (closeButton) closeButton.focus();
+  }
+
+  function closeModal() {
+    modal.hidden = true;
+    document.body.classList.remove('matthew-video-modal-open');
+    unmountIframe();
+    if (lastActiveElement && typeof lastActiveElement.focus === 'function') {
+      lastActiveElement.focus();
+    }
+  }
+
+  openers.forEach((opener) => {
+    opener.addEventListener('click', openModal);
+  });
+
+  closers.forEach((closer) => {
+    closer.addEventListener('click', closeModal);
+  });
+
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal.querySelector('.matthew-video-modal-backdrop')) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !modal.hidden) {
+      closeModal();
+    }
+  });
+})();
+
 // Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
