@@ -1241,6 +1241,7 @@ body.matthew-video-modal-open {
   flex-direction: column;
   gap: 18px;
 }
+.analytics-pipeline-visuals { gap: 22px; }
 .analytics-screenshot-overlay { margin-top: -12px; }
 .analytics-float-kpi { z-index: 3; }
 
