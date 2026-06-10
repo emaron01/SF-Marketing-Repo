@@ -1244,16 +1244,18 @@ body.matthew-video-modal-open {
 .analytics-pipeline-visuals { gap: 22px; }
 .analytics-team-visuals { min-height: 520px; }
 
+#channel .split-section { align-items: stretch; }
 .analytics-channel-visuals {
   position: relative;
-  min-height: 580px;
-  padding: 24px 0 32px;
+  min-height: 100%;
+  align-self: stretch;
+  padding: 0;
 }
 .analytics-channel-primary {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   width: 88%;
-  margin-left: auto;
-  margin-top: 48px;
   z-index: 1;
   background: rgba(15,23,42,0.84);
   transform: rotate(0.6deg);
