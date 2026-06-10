@@ -1242,6 +1242,67 @@ body.matthew-video-modal-open {
   gap: 18px;
 }
 .analytics-pipeline-visuals { gap: 22px; }
+.analytics-team-visuals { min-height: 520px; }
+
+.analytics-channel-visuals {
+  position: relative;
+  min-height: 580px;
+  padding: 24px 0 32px;
+}
+.analytics-channel-primary {
+  position: relative;
+  width: 88%;
+  margin-left: auto;
+  margin-top: 48px;
+  z-index: 1;
+  background: rgba(15,23,42,0.84);
+  transform: rotate(0.6deg);
+}
+.analytics-channel-secondary {
+  position: absolute;
+  top: 0;
+  left: -12px;
+  width: 76%;
+  z-index: 3;
+  background: rgba(15,23,42,0.92);
+  box-shadow: 0 28px 80px rgba(0,0,0,0.45), 0 0 0 1px rgba(34,211,238,0.18);
+  transform: rotate(-1.2deg);
+}
+.analytics-channel-primary img,
+.analytics-channel-secondary img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.analytics-reports-visuals {
+  position: relative;
+  min-height: 560px;
+  padding: 16px 0 40px;
+}
+.analytics-reports-primary {
+  position: relative;
+  width: 86%;
+  z-index: 1;
+  background: rgba(15,23,42,0.84);
+  transform: rotate(-0.8deg);
+}
+.analytics-reports-secondary {
+  position: absolute;
+  bottom: 8px;
+  right: -18px;
+  width: 72%;
+  z-index: 3;
+  background: rgba(15,23,42,0.94);
+  box-shadow: 0 32px 90px rgba(0,0,0,0.48), 0 0 0 1px rgba(34,211,238,0.22);
+  transform: rotate(1.4deg);
+}
+.analytics-reports-primary img,
+.analytics-reports-secondary img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 .analytics-screenshot-overlay { margin-top: -12px; }
 .analytics-float-kpi { z-index: 3; }
 
@@ -1629,6 +1690,33 @@ body.matthew-video-modal-open {
   .leader-screenshot-secondary {
     position: static;
     margin-top: 18px;
+  }
+  .analytics-channel-visuals {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 18px;
+    min-height: auto;
+    padding: 0;
+  }
+  .analytics-channel-primary,
+  .analytics-channel-secondary {
+    width: 100%;
+    margin: 0;
+    position: static;
+    transform: none;
+  }
+  .analytics-reports-visuals {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 18px;
+    min-height: auto;
+    padding: 0;
+  }
+  .analytics-reports-primary,
+  .analytics-reports-secondary {
+    width: 100%;
+    position: static;
+    transform: none;
   }
   .hero-proof-grid,
   .matthew-feature-grid,
