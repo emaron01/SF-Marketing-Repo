@@ -68,13 +68,57 @@
 // Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
-    const target = document.querySelector(this.getAttribute('href'));
+    const href = this.getAttribute('href');
+    if (href === '#') return;
+    const target = document.querySelector(href);
     if (target) {
       e.preventDefault();
+      if (this.closest('.analytics-section-nav')) return;
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
 });
+
+// Analytics page — sticky section nav with intersection observer
+(function () {
+  const sectionNav = document.querySelector('.analytics-section-nav');
+  if (!sectionNav) return;
+
+  const navItems = sectionNav.querySelectorAll('a[data-section]');
+  const sections = Array.from(navItems)
+    .map((link) => document.getElementById(link.getAttribute('data-section')))
+    .filter(Boolean);
+
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const id = entry.target.id;
+        navItems.forEach((link) => {
+          link.classList.toggle('active', link.getAttribute('data-section') === id);
+        });
+      });
+    },
+    { rootMargin: '-40% 0px -50% 0px', threshold: 0 }
+  );
+
+  sections.forEach((section) => sectionObserver.observe(section));
+
+  navItems.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.getElementById(link.getAttribute('data-section'));
+      if (!target) return;
+      const offset = sectionNav.offsetHeight + 88;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+      navItems.forEach((item) => item.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+
+  if (navItems.length) navItems[0].classList.add('active');
+})();
 
 // Scroll animations
 const observer = new IntersectionObserver((entries) => {
@@ -88,7 +132,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
 document.querySelectorAll(
-  '.problem-card, .feature-card, .comparison-card, .pricing-card, .flow-step, .value-panel, .health-point, .matthew-inner, .sf-card, .feature-large, .medd-card, .screenshot-card, .contact-panel'
+  '.problem-card, .feature-card, .comparison-card, .pricing-card, .flow-step, .value-panel, .health-point, .matthew-inner, .sf-card, .feature-large, .medd-card, .screenshot-card, .contact-panel, .analytics-mock-card, .analytics-ai-callout'
 ).forEach((el, i) => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(24px)';
