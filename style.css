@@ -1736,6 +1736,21 @@ body.matthew-video-modal-open {
   min-height: 100px;
   width: 100%;
 }
+.hiw-integration-logo {
+  height: 56px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+}
+.hiw-integration-logo-hubspot {
+  height: 64px;
+  max-width: 64px;
+}
+.hiw-integration-logo-excel {
+  height: 64px;
+  max-width: 64px;
+  border-radius: 12px;
+}
 .hiw-excel-icon {
   width: 56px;
   height: 56px;
