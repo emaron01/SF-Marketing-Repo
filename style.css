@@ -1793,6 +1793,11 @@ body.matthew-video-modal-open {
   height: 100%;
   object-fit: cover;
 }
+.hiw-flow-rep {
+  width: 396px;
+  height: 396px;
+  border-radius: 32px;
+}
 .hiw-flow-dashboard {
   width: 400px;
   height: 264px;
@@ -2065,6 +2070,12 @@ body.matthew-video-modal-open {
     max-width: 340px;
     height: auto;
     aspect-ratio: 3 / 2;
+  }
+  .hiw-flow-rep {
+    max-width: 340px;
+    width: 100%;
+    aspect-ratio: 1;
+    height: auto;
   }
   .hiw-flow-visual-stack {
     width: 100%;
