@@ -1747,9 +1747,9 @@ body.matthew-video-modal-open {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 28px;
   margin-bottom: 36px;
-  padding: 32px 24px;
+  padding: 40px 32px;
   border-radius: 24px;
   border: 1px solid rgba(34,211,238,0.22);
   background:
@@ -1770,17 +1770,17 @@ body.matthew-video-modal-open {
 }
 .hiw-flow-node-matthew span { color: #67e8f9; }
 .hiw-flow-avatar {
-  width: 88px;
-  height: 88px;
-  border-radius: 20px;
+  width: 132px;
+  height: 132px;
+  border-radius: 24px;
   overflow: hidden;
   border: 1px solid rgba(255,255,255,0.14);
   background: rgba(15,23,42,0.80);
   box-shadow: 0 16px 48px rgba(0,0,0,0.24);
 }
 .hiw-flow-matthew {
-  width: 104px;
-  height: 104px;
+  width: 156px;
+  height: 156px;
   border-color: rgba(34,211,238,0.40);
   box-shadow: 0 20px 60px rgba(34,211,238,0.18);
 }
@@ -1791,7 +1791,7 @@ body.matthew-video-modal-open {
 }
 .hiw-flow-arrow {
   color: var(--cyan);
-  font-size: 28px;
+  font-size: 42px;
   font-weight: 900;
   line-height: 1;
   opacity: 0.8;
