@@ -337,8 +337,25 @@ ul { list-style: none; }
   row-gap: 7px;
   align-items: center;
 }
-.hero-pills, .pill-row { display: flex; flex-wrap: wrap; gap: 12px; }
-.hero-pills { margin-bottom: 28px; }
+.hero-pills, .pill-row, .hero-integration-logos { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero-pills, .hero-integration-block { margin-bottom: 28px; }
+.hero-integration-block .section-label {
+  display: block;
+  margin-bottom: 12px;
+}
+.hero-integration-logos {
+  align-items: center;
+  gap: 16px;
+}
+.hero-integration-logos .hiw-integration-logo {
+  height: 28px;
+  max-width: 60px;
+}
+.hero-integration-logos .hiw-integration-logo-hubspot,
+.hero-integration-logos .hiw-integration-logo-excel {
+  height: 32px;
+  max-width: 32px;
+}
 .pill-row { margin-top: 18px; }
 .pill {
   display: inline-flex;
@@ -1935,6 +1952,7 @@ body.matthew-video-modal-open {
   to { opacity: 1; transform: translateY(0); }
 }
 .hero-pills,
+.hero-integration-block,
 .hero-headline,
 .hero-sub,
 .hero-actions,
