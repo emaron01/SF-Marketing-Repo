@@ -48,7 +48,7 @@
       </ul>
       <div class="nav-cta">
         <a href="https://mysalesforecast.io" class="btn-ghost">Login</a>
-        <a href="/#contact" class="btn-primary">Book Demo</a>
+        <a href="/#contact" class="btn-primary">Book Live Demo</a>
       </div>
     </div>
   </nav>
@@ -80,7 +80,7 @@
 
         <div class="analytics-hero-actions">
           <a href="/#contact" class="btn-primary btn-lg">Book a Demo</a>
-          <a href="/#matthew" class="btn-outline btn-lg">See Matthew in Action</a>
+          <button type="button" class="btn-outline btn-lg" data-matthew-video-open>See Live Demo</button>
         </div>
       </div>
     </section>
@@ -368,7 +368,7 @@
           </div>
           <div class="about-cta-actions">
             <a href="/#contact" class="btn-primary btn-lg">Book a Demo</a>
-            <a href="/#matthew" class="btn-outline btn-lg">See Matthew in Action</a>
+            <button type="button" class="btn-outline btn-lg" data-matthew-video-open>See Live Demo</button>
           </div>
         </div>
       </div>
@@ -395,7 +395,7 @@
           </div>
           <div class="footer-col">
             <div class="footer-col-title">Company</div>
-            <a href="/#contact">Book Demo</a>
+            <a href="/#contact">Book Live Demo</a>
             <a href="/contact.html">Contact Us</a>
             <a href="https://mysalesforecast.io">Login</a>
             <a href="tel:+18337253745">833-725-3745</a>
@@ -411,6 +411,20 @@
       </div>
     </div>
   </footer>
+
+  <div id="matthew-video-modal" class="matthew-video-modal" hidden>
+    <div class="matthew-video-modal-backdrop" data-matthew-video-close tabindex="-1" aria-hidden="true"></div>
+    <div
+      class="matthew-video-modal-dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Watch Matthew demo video">
+      <button type="button" class="matthew-video-modal-close" data-matthew-video-close aria-label="Close video">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="matthew-video-modal-frame"></div>
+    </div>
+  </div>
 
   <script src="/script.js"></script>
 </body>
