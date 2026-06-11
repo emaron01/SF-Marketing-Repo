@@ -1793,10 +1793,14 @@ body.matthew-video-modal-open {
   height: 100%;
   object-fit: cover;
 }
+.hiw-matthew-flow-single {
+  padding: 48px 40px 56px;
+}
 .hiw-flow-rep {
-  width: 396px;
-  height: 396px;
-  border-radius: 32px;
+  width: min(792px, 100%);
+  aspect-ratio: 1;
+  height: auto;
+  border-radius: 40px;
 }
 .hiw-flow-dashboard {
   width: 400px;
@@ -2072,10 +2076,10 @@ body.matthew-video-modal-open {
     aspect-ratio: 3 / 2;
   }
   .hiw-flow-rep {
-    max-width: 340px;
     width: 100%;
-    aspect-ratio: 1;
+    max-width: 420px;
     height: auto;
+    aspect-ratio: 1;
   }
   .hiw-flow-visual-stack {
     width: 100%;
