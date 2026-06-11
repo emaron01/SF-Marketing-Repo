@@ -1806,6 +1806,48 @@ body.matthew-video-modal-open {
   object-fit: cover;
   object-position: top center;
 }
+
+.hiw-flow-visual-stack {
+  position: relative;
+  width: 440px;
+  min-height: 320px;
+}
+.hiw-flow-matthew-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: rgba(15,23,42,0.88);
+  border-radius: 20px;
+}
+.hiw-flow-matthew-bg img {
+  width: 72%;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.55;
+  filter: saturate(0.85);
+}
+.hiw-flow-insights-overlay {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 94%;
+  z-index: 3;
+  background: rgba(15,23,42,0.94);
+  box-shadow: 0 28px 80px rgba(0,0,0,0.48), 0 0 0 1px rgba(34,211,238,0.20);
+  border-radius: 16px;
+}
+.hiw-flow-insights-overlay img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: top center;
+}
+
 .hiw-flow-arrow {
   color: var(--cyan);
   font-size: 84px;
@@ -2023,6 +2065,11 @@ body.matthew-video-modal-open {
     max-width: 340px;
     height: auto;
     aspect-ratio: 3 / 2;
+  }
+  .hiw-flow-visual-stack {
+    width: 100%;
+    max-width: 340px;
+    min-height: 240px;
   }
   .hiw-flow-arrow {
     transform: rotate(90deg);
