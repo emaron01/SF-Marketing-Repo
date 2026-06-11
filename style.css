@@ -1793,8 +1793,11 @@ body.matthew-video-modal-open {
   height: 100%;
   object-fit: cover;
 }
+.hiw-step-cards-first {
+  margin-bottom: 36px;
+}
 .hiw-matthew-flow-single {
-  padding: 48px 40px 56px;
+  padding: 24px 40px 16px;
 }
 .hiw-flow-rep {
   width: min(792px, 100%);
