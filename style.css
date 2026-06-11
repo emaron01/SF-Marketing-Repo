@@ -1798,9 +1798,17 @@ body.matthew-video-modal-open {
 }
 .hiw-flow-rep {
   width: min(792px, 100%);
-  aspect-ratio: 1;
   height: auto;
   border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hiw-flow-rep img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
 }
 .hiw-flow-dashboard {
   width: 400px;
@@ -2078,8 +2086,6 @@ body.matthew-video-modal-open {
   .hiw-flow-rep {
     width: 100%;
     max-width: 420px;
-    height: auto;
-    aspect-ratio: 1;
   }
   .hiw-flow-visual-stack {
     width: 100%;
