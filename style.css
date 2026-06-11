@@ -1768,7 +1768,11 @@ body.matthew-video-modal-open {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-.hiw-flow-node-matthew span { color: #67e8f9; }
+.hiw-matthew-flow-two .hiw-flow-node span {
+  max-width: 280px;
+  text-align: center;
+  line-height: 1.35;
+}
 .hiw-flow-avatar {
   width: 264px;
   height: 264px;
