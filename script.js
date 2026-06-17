@@ -120,7 +120,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   if (navItems.length) navItems[0].classList.add('active');
 })();
 
-// Scroll animations
+// Scroll animations (skip above-the-fold hero content for LCP)
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -134,6 +134,7 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll(
   '.problem-card, .feature-card, .comparison-card, .pricing-card, .flow-step, .value-panel, .health-point, .matthew-inner, .sf-card, .feature-large, .medd-card, .screenshot-card, .contact-panel, .analytics-mock-card, .analytics-ai-callout, .hiw-card, .hiw-kpi-card'
 ).forEach((el, i) => {
+  if (el.closest('#top') || el.classList.contains('hero-screenshot')) return;
   el.style.opacity = '0';
   el.style.transform = 'translateY(24px)';
   el.style.transition = `opacity 0.5s ${i * 0.07}s ease, transform 0.5s ${i * 0.07}s ease`;
@@ -153,6 +154,36 @@ window.addEventListener('scroll', () => {
     if (link.getAttribute('href') === `#${current}`) link.style.color = '#1a6dcc';
   });
 }, { passive: true });
+
+// HubSpot form — load embed script when contact section nears viewport
+(function () {
+  const contactSection = document.getElementById('contact');
+  const formFrame = document.getElementById('hs-form-frame');
+  if (!contactSection && !formFrame) return;
+
+  const HS_EMBED_SRC = 'https://js-na2.hsforms.net/forms/embed/245933645.js';
+
+  function loadHubSpotEmbed() {
+    if (document.querySelector(`script[src="${HS_EMBED_SRC}"]`)) return;
+    const script = document.createElement('script');
+    script.src = HS_EMBED_SRC;
+    script.defer = true;
+    document.body.appendChild(script);
+  }
+
+  const target = contactSection || formFrame;
+  if ('IntersectionObserver' in window) {
+    const embedObserver = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        loadHubSpotEmbed();
+        embedObserver.disconnect();
+      }
+    }, { rootMargin: '240px 0px' });
+    embedObserver.observe(target);
+  } else {
+    window.addEventListener('load', loadHubSpotEmbed, { once: true });
+  }
+})();
 
 // HubSpot form fallback — show contact details if form is blocked
 (function () {

@@ -1746,6 +1746,12 @@ body.matthew-video-modal-open {
   object-fit: cover;
   object-position: top center;
 }
+.hero-screenshot picture,
+.hero-screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .hiw-card-icon-wrap {
   display: flex;
   align-items: center;
