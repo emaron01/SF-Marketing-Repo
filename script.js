@@ -2,7 +2,7 @@
 
 // Matthew demo video modal (Meet Matthew section)
 (function () {
-  const EMBED_URL = 'https://www.loom.com/embed/ef7a0fb1c81a4da2bba5a4feff7d1369';
+  const EMBED_URL = 'https://www.loom.com/embed/b45281874da0419ca5e16a59fc652853';
   const modal = document.getElementById('matthew-video-modal');
   if (!modal) return;
 
