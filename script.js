@@ -2,7 +2,7 @@
 
 // Matthew demo video modal (Meet Matthew section)
 (function () {
-  const EMBED_URL = 'https://www.loom.com/embed/b45281874da0419ca5e16a59fc652853';
+  const DEFAULT_EMBED_URL = 'https://www.loom.com/embed/b45281874da0419ca5e16a59fc652853';
   const modal = document.getElementById('matthew-video-modal');
   if (!modal) return;
 
@@ -11,11 +11,12 @@
   const closers = modal.querySelectorAll('[data-matthew-video-close]');
   let lastActiveElement = null;
 
-  function mountIframe() {
-    if (!frameHost || frameHost.firstElementChild) return;
+  function mountIframe(embedUrl, title) {
+    if (!frameHost) return;
+    frameHost.innerHTML = '';
     const iframe = document.createElement('iframe');
-    iframe.src = EMBED_URL;
-    iframe.title = 'Watch Matthew demo video';
+    iframe.src = embedUrl;
+    iframe.title = title;
     iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
     iframe.setAttribute('allowfullscreen', '');
     frameHost.appendChild(iframe);
@@ -26,9 +27,11 @@
     frameHost.innerHTML = '';
   }
 
-  function openModal() {
+  function openModal(opener) {
     lastActiveElement = document.activeElement;
-    mountIframe();
+    const embedUrl = opener.getAttribute('data-matthew-video-src') || DEFAULT_EMBED_URL;
+    const title = opener.getAttribute('aria-label') || 'Watch Matthew demo video';
+    mountIframe(embedUrl, title);
     modal.hidden = false;
     document.body.classList.add('matthew-video-modal-open');
     const closeButton = modal.querySelector('.matthew-video-modal-close');
@@ -45,7 +48,7 @@
   }
 
   openers.forEach((opener) => {
-    opener.addEventListener('click', openModal);
+    opener.addEventListener('click', () => openModal(opener));
   });
 
   closers.forEach((closer) => {
